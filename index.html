@@ -32,14 +32,8 @@
     }
 
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(3);
-        opacity: 0;
-      }
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
     }
 
     #search {
@@ -150,6 +144,17 @@
         card.style.display = title.includes(input) ? "block" : "none";
       });
     }
+
+    // Safe Monetag-compatible scroll ad trigger
+    window.addEventListener('scroll', function triggerAd() {
+      const adScript = document.createElement('script');
+      adScript.src = "https://fpyf8.com/88/tag.min.js";
+      adScript.setAttribute("data-zone", "156774");
+      adScript.setAttribute("async", "true");
+      adScript.setAttribute("data-cfasync", "false");
+      document.body.appendChild(adScript);
+      window.removeEventListener('scroll', triggerAd);
+    });
   </script>
 
   <!-- Monetag Ad Scripts -->
@@ -159,6 +164,5 @@
   <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557834"></script>
   <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557835"></script>
   <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="156714"></script>
-  <script src="https://fpyf8.com/88/tag.min.js" data-zone="156774" async data-cfasync="false"></script>
 </body>
 </html>
