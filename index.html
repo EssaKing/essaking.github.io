@@ -17,9 +17,33 @@
   <link rel="canonical" href="https://essaking.github.io/-Hindi-Anime-World-/" />
   <link rel="icon" href="assets/newlogo.png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      z-index: 9999;
+      animation: fadeOut 1s ease-out 1s forwards;
+    }
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Loader -->
+  <div id="loader">Loading Anime World...</div>
+
   <!-- Header -->
   <header>
     <img class="logo" src="assets/newlogo.png" alt="Anime Logo" />
@@ -68,6 +92,11 @@
 
   <!-- JavaScript -->
   <script>
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
+
     function showLink(button) {
       const card = button.closest('.anime-card');
       const downloadBox = card.querySelector('.download-box');
