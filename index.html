@@ -17,6 +17,50 @@
   <link rel="canonical" href="https://essaking.github.io/-Hindi-Anime-World-/" />
   <link rel="icon" href="assets/newlogo.png" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .click-animation {
+      position: fixed;
+      width: 30px;
+      height: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: pulse 0.3s ease-out forwards;
+      z-index: 9999;
+      backdrop-filter: blur(6px);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    #search {
+      width: 100%;
+      max-width: 400px;
+      padding: 14px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+      transition: 0.3s ease;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 0 0 2px rgba(255, 71, 71, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+
+    #search:focus {
+      box-shadow: 0 0 0 2px #ff4747, 0 0 12px rgba(255, 71, 71, 0.6);
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -67,6 +111,15 @@
 
   <!-- JavaScript -->
   <script>
+    document.body.addEventListener("click", function (e) {
+      const anim = document.createElement("div");
+      anim.className = "click-animation";
+      anim.style.left = e.clientX - 15 + "px";
+      anim.style.top = e.clientY - 15 + "px";
+      document.body.appendChild(anim);
+      setTimeout(() => anim.remove(), 300);
+    });
+
     function showLink(button) {
       const card = button.closest('.anime-card');
       const downloadBox = card.querySelector('.download-box');
@@ -98,5 +151,13 @@
       });
     }
   </script>
+
+  <!-- Monetag MultiTag Full Ad Script -->
+  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557831"></script>
+  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557832"></script>
+  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557833"></script>
+  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557834"></script>
+  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557835"></script>
+  <script src="https://fpyf8.com/88/tag.min.js" data-zone="156714" async data-cfasync="false"></script>
 </body>
 </html>
