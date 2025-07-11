@@ -18,32 +18,50 @@
   <link rel="icon" href="assets/newlogo.png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    #loader {
+    .click-animation {
       position: fixed;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
+      width: 30px;
+      height: 30px;
+      border: 3px solid #ff4747;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: pulse 0.6s ease-out forwards;
       z-index: 9999;
-      animation: fadeOut 1s ease-out 1s forwards;
     }
-    @keyframes fadeOut {
-      to {
-        opacity: 0;
-        visibility: hidden;
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 1;
       }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+
+    /* Professional search box styling */
+    #search {
+      width: 100%;
+      max-width: 400px;
+      padding: 12px 16px;
+      font-size: 16px;
+      border: 2px solid #ff4747;
+      border-radius: 25px;
+      outline: none;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      display: block;
+    }
+    #search:focus {
+      border-color: #ff1919;
+      box-shadow: 0 0 10px rgba(255, 71, 71, 0.4);
     }
   </style>
 </head>
 
 <body>
-  <!-- Loader -->
-  <div id="loader">Loading Anime World...</div>
-
   <!-- Header -->
   <header>
     <img class="logo" src="assets/newlogo.png" alt="Anime Logo" />
@@ -92,9 +110,13 @@
 
   <!-- JavaScript -->
   <script>
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('loader');
-      loader.style.display = 'none';
+    document.body.addEventListener("click", function (e) {
+      const anim = document.createElement("div");
+      anim.className = "click-animation";
+      anim.style.left = e.clientX - 15 + "px";
+      anim.style.top = e.clientY - 15 + "px";
+      document.body.appendChild(anim);
+      setTimeout(() => anim.remove(), 600);
     });
 
     function showLink(button) {
