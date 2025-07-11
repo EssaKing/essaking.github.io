@@ -1,0 +1,197 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://rare-gallery.com/thumbs/586221-anime-anime.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+header {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+header img,
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+header span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Overlay Section */
+.overlay {
+  padding: 40px 20px;
+  text-align: center;
+  flex: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Search Bar */
+#search {
+  padding: 15px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+/* Anime Cards */
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.anime-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-bg {
+  width: 100%;
+  height: 250px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.card-content p {
+  margin: 0 0 15px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Button Style */
+.button {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background: linear-gradient(45deg, #ff5252, #ff7979);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Download Box */
+.download-box {
+  display: none;
+  margin-top: 10px;
+}
+
+.download-box a {
+  background: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.download-box a:hover {
+  background: #218838;
+}
+
+/* Telegram Link */
+.telegram-link {
+  display: none;
+  margin-top: 10px;
+  color: #1e90ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.telegram-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .anime-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  header span {
+    font-size: 18px;
+  }
+
+  .overlay {
+    padding: 20px 10px;
+  }
+}

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="monetag" content="f50f5d7682cd90250e787b8b7d82b766">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 Hindi Anime World – Watch Free Hindi Dubbed Anime</title>
+  <meta name="description" content="Watch free Hindi dubbed anime like Prison School and more. Fast streaming, YouTube links, Telegram updates – सब कुछ एक ही जगह।">
+  <meta name="keywords" content="Hindi anime, anime in Hindi, dubbed anime, watch anime India, free anime streaming, Prison School Hindi, हिंदी ऐनीमे">
+  <meta name="author" content="EssaKing" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="🔥 Hindi Anime World – Watch Hindi Dubbed Anime Free" />
+  <meta property="og:description" content="Free anime in Hindi. Fast, clean, and mobile-friendly. Watch dubbed anime episodes online or join our Telegram." />
+  <meta property="og:image" content="assets/newlogo.png" />
+  <meta property="og:url" content="https://essaking.github.io/-Hindi-Anime-World-/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://essaking.github.io/-Hindi-Anime-World-/" />
+  <link rel="icon" href="assets/newlogo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <img class="logo" src="assets/newlogo.png" alt="Anime Logo" />
+    <span>🔥 Hindi Anime World</span>
+  </header>
+
+  <!-- Content -->
+  <div class="overlay">
+    <h1>📺 Watch Free Hindi Dubbed Anime | हिंदी में ऐनीमे देखें</h1>
+    <input type="text" id="search" placeholder="Search anime..." onkeyup="filterAnime()" />
+
+    <div class="anime-grid" id="animeList">
+      <!-- Card 1 -->
+      <div class="anime-card">
+        <div class="card-bg" style="background-image: url('https://i.ebayimg.com/images/g/83YAAOSwc0dgAQvL/s-l1600.webp');"></div>
+        <div class="card-content">
+          <h3>Prison School [Hindi Dubbed]</h3>
+          <p>All Episodes</p>
+          <button class="button" onclick="showLink(this)">I Subscribed – Show Link</button>
+          <div class="download-box" style="display: none;">
+            <a href="https://www.youtube.com/@DisneyDock" target="_blank">📥 Subscribe & Get Link</a>
+          </div>
+          <a class="telegram-link" href="https://web.telegram.org/k/#@PrisonSchool_In_Hindi_Dub" target="_blank" style="display: none;">➡️ Join Telegram for updates</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="anime-card">
+        <div class="card-bg" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640728808i/59963266.jpg');"></div>
+        <div class="card-content">
+          <h3>Worthless Appraiser Class [Hindi Dub]</h3>
+          <p>[Hindi-Eng-Jap] Triple Audio</p>
+          <button class="button" onclick="showLink(this)">I Subscribed – Show Link</button>
+          <div class="download-box" style="display: none;">
+            <a href="https://www.youtube.com/@DisneyDock" target="_blank">📥 Subscribe & Get Link</a>
+          </div>
+          <a class="telegram-link" href="https://animahd.com/even-given-the-worthless-appraiser-class-im-actually-the-strongest-season-1-hindi-dub-org" target="_blank" style="display: none;">➡️ Watch on AnimaHD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Hindi Anime World | Built with ❤️ by EssaKing</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function showLink(button) {
+      const card = button.closest('.anime-card');
+      const downloadBox = card.querySelector('.download-box');
+      const telegramLink = card.querySelector('.telegram-link');
+
+      if (downloadBox) {
+        downloadBox.style.display = 'block';
+
+        const downloadAnchor = downloadBox.querySelector('a');
+        if (downloadAnchor) {
+          downloadAnchor.addEventListener('click', function () {
+            setTimeout(() => {
+              if (telegramLink) {
+                telegramLink.style.display = 'inline-block';
+              }
+            }, 1000);
+          }, { once: true });
+        }
+      }
+    }
+
+    function filterAnime() {
+      const input = document.getElementById("search").value.toLowerCase();
+      const cards = document.querySelectorAll(".anime-card");
+
+      cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        card.style.display = title.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
