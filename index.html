@@ -19,63 +19,33 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.95));
-      backdrop-filter: blur(5px);
+      margin: 0;
+      padding: 0;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+    .overlay {
+      padding: 20px;
+      margin: 0 auto;
+      max-width: 1000px;
     }
     header {
-      background: rgba(255, 255, 255, 0.6) !important;
-      backdrop-filter: blur(10px);
-      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 15px 20px;
       display: flex;
       align-items: center;
       gap: 10px;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-    .overlay {
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      backdrop-filter: blur(8px);
-      margin: 20px;
-      padding: 20px;
+    .logo {
+      height: 40px;
     }
-    .click-animation {
-      position: fixed;
-      width: 30px;
-      height: 30px;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      pointer-events: none;
-      animation: pulse 0.3s ease-out forwards;
-      z-index: 9999;
-      backdrop-filter: blur(6px);
-      background-color: rgba(255, 255, 255, 0.05);
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(3);
-        opacity: 0;
-      }
-    }
-    #search {
-      width: 100%;
-      max-width: 400px;
-      padding: 14px 18px;
-      font-size: 16px;
-      border: none;
-      border-radius: 30px;
-      outline: none;
-      transition: 0.3s ease;
-      margin: 20px auto;
-      display: block;
-      box-shadow: 0 0 0 2px rgba(255, 71, 71, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1);
-      background-color: #fff;
-    }
-    #search:focus {
-      box-shadow: 0 0 0 2px #ff4747, 0 0 12px rgba(255, 71, 71, 0.6);
+    .anime-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      margin: 20px 0;
+      padding: 15px;
     }
   </style>
 </head>
@@ -94,7 +64,7 @@
     <div class="anime-grid" id="animeList">
       <!-- Card 1 -->
       <div class="anime-card">
-        <div class="card-bg" style="background-image: url('https://i.ebayimg.com/images/g/83YAAOSwc0dgAQvL/s-l1600.webp');"></div>
+        <div class="card-bg" style="background-image: url('https://i.ebayimg.com/images/g/83YAAOSwc0dgAQvL/s-l1600.webp'); background-size: cover; height: 200px; border-radius: 10px;"></div>
         <div class="card-content">
           <h3>Prison School [Hindi Dubbed]</h3>
           <p>All Episodes</p>
@@ -108,7 +78,7 @@
 
       <!-- Card 2 -->
       <div class="anime-card">
-        <div class="card-bg" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640728808i/59963266.jpg');"></div>
+        <div class="card-bg" style="background-image: url('https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640728808i/59963266.jpg'); background-size: cover; height: 200px; border-radius: 10px;"></div>
         <div class="card-content">
           <h3>Worthless Appraiser Class [Hindi Dub]</h3>
           <p>[Hindi-Eng-Jap] Triple Audio</p>
@@ -128,15 +98,6 @@
 
   <!-- JavaScript -->
   <script>
-    document.body.addEventListener("click", function (e) {
-      const anim = document.createElement("div");
-      anim.className = "click-animation";
-      anim.style.left = e.clientX - 15 + "px";
-      anim.style.top = e.clientY - 15 + "px";
-      document.body.appendChild(anim);
-      setTimeout(() => anim.remove(), 300);
-    });
-
     function showLink(button) {
       const card = button.closest('.anime-card');
       const downloadBox = card.querySelector('.download-box');
@@ -168,13 +129,5 @@
       });
     }
   </script>
-
-  <!-- Monetag MultiTag Full Ad Script -->
-  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557831"></script>
-  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557832"></script>
-  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557833"></script>
-  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557834"></script>
-  <script async data-cfasync="false" src="https://fpyf8.com/88/tag.min.js" data-zone="9557835"></script>
-  <script src="https://fpyf8.com/88/tag.min.js" data-zone="156714" async data-cfasync="false"></script>
 </body>
 </html>
